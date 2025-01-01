@@ -411,6 +411,20 @@ export const Icons = {
     strokeLinejoin: "round",
     stroke: "currentColor",
   },
+  phone: {
+  paths: [
+    {
+      d: "M16.8 4.4c1.7 0 3.1 1.4 3.1 3.1v8.9c0 1.7-1.4 3.1-3.1 3.1H7.2c-1.7 0-3.1-1.4-3.1-3.1V7.5c0-1.7 1.4-3.1 3.1-3.1h9.6zM8.7 5.6c-.5 0-.9.4-.9.9s.4.9.9.9h6.6c.5 0 .9-.4.9-.9s-.4-.9-.9-.9H8.7zm3.5 10.5c.6 0 1.1-.5 1.1-1.1 0-.6-.5-1.1-1.1-1.1-.6 0-1.1.5-1.1 1.1 0 .6.5 1.1 1.1 1.1zm-1.3-1.1c0-.1.1-.2.2-.2h2.4c.1 0 .2.1.2.2 0 .1-.1.2-.2.2h-2.4c-.1 0-.2-.1-.2-.2z",
+    },
+  ],
+  class: "mt-1.5 h-6 w-6 flex-shrink-0 text-neutral-600 dark:text-neutral-400",
+  viewBox: "0 0 24 24",
+  fill: "none",
+  strokeWidth: "1.5",
+  strokeLinecap: "round",
+  strokeLinejoin: "round",
+  stroke: "currentColor",
+},
   earth: {
     paths: [
       {

@@ -10,13 +10,13 @@ import TestimonialsSection from "@components/sections/testimonials/TestimonialsS
 import PricingSection from "@components/sections/pricing/PricingSection.astro";
 import FAQ from "@components/sections/misc/FAQ.astro";
 import AnnouncementBanner from "@components/ui/banners/AnnouncementBanner.astro";
-import heroImage from "@images/hero-image.avif";
+import HeroImage from "@images/hero-image-2.jpg";
 import faqs from "@data/faqs.json";
 import features from "@data/features.json";
 import pricing from "@data/pricing.json";
-import featureImage from "@images/features-image.avif";
+import featureImage from "@images/features-image-new.jpg";
 import construction from "@images/construction-image.avif";
-import tools from "@images/automated-tools.avif";
+import tools from "@images/automated-tools.jpg";
 import dashboard from "@images/dashboard-image.avif";
 
 const avatarSrcs: Array<string> = [
@@ -35,30 +35,29 @@ const avatarSrcs: Array<string> = [
   />
 
   <HeroSection
-    title=`Equip Your Projects with <span
-        class="text-yellow-500 dark:text-yellow-400">ScrewFast</span>`
-    subTitle="Top-quality hardware tools and expert construction services for every project need."
-    primaryBtn="Start Exploring"
+    title=`Henryetta’s Favorite Heating & Air Conditioning Company`
+    subTitle= "We're a family-owned business proudly serving Okmulgee County and surrounding areas, offering expert heating, ventilating, and air conditioning services for homes and businesses. Let us earn your trust!"
+    primaryBtn="Call Now"
     primaryBtnURL="/products"
-    secondaryBtn="Contact Sales Team"
+    secondaryBtn="Get Quote"
     secondaryBtnURL="/contact"
     withReview={true}
     avatars={avatarSrcs}
     rating=`<span class="font-bold">4.8</span> / 5`
     starCount={4}
     reviews=`From Over <span class="font-bold">12.8k</span> Reviews`
-    src={heroImage}
+    src={HeroImage}
     alt="Stack of ScrewFast product boxes containing assorted hardware tools"
   />
 
   <ClientsSection
-    title="Trusted by Industry Leaders"
-    subTitle="Experience the reliability chosen by industry giants."
+    title="The Best Equipment Money Can Buy"
+    subTitle="Experience the reliability of American Standard and Samsung."
   />
-
+  
   <FeaturesGeneral
-    title="Meeting Industry Demands"
-    subTitle="At ScrewFast, we tackle the unique challenges encountered in the hardware and construction sectors. From cutting-edge tools to expert services, we're dedicated to helping you overcome obstacles and achieve your goals."
+    title="Meeting Comfort Needs"
+    subTitle="At Kelch Total Comfort LLC, we provide expert heating and cooling solutions across Henryetta, Okmulgee County, and surrounding areas. We're committed to continuous improvement, striving every day to offer superior service and create the perfect indoor environment for our customers. While we may not be the best yet, we are striving every day to be the best we can be for you!"
     src={featureImage}
     alt="ScrewFast products in floating boxes"
     features={features}

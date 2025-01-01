@@ -247,8 +247,8 @@ You can pass values to props directly in the page files for components used acro
 
 ```html
 <HeroSection
-  subTitle="Top-quality hardware tools and expert construction services for every project need."
-  primaryBtn="Start Exploring"
+  subTitle="We are a family-owned business proudly serving Okmulgee County and surrounding areas, offering expert heating and air conditioning services for homes and businesses. Let us earn your trust!"
+  primaryBtn="Call Now"
   primaryBtnURL="/explore"
 />
 
@@ -460,7 +460,7 @@ To customize SEO settings, modify the values in the `constants.ts` file. Key con
 // constants.ts
 
 export const SITE = {
-  title: "ScrewFast",
+  title: "Kelch’s Total Comfort, LLC",
   // Other SITE properties...
 };
 
