@@ -7,9 +7,10 @@ import RightSection from "@components/ui/blocks/RightSection.astro";
 import FeaturesStats from "@components/sections/features/FeaturesStats.astro";
 
 // Import necessary images
-import blueprints from "@images/blueprints-image.avif";
-import personWorking from "@images/person-working.avif";
-import beforeAfter from "@images/before-after.avif";
+import heatingInstallation from "@images/heating-installation.jpg";
+import heatingInstallationTwo from "@images/heating-installation-2.jpg";
+import samsung from "@images/samsung.jpg";
+import samsungtwo from "@images/samsungtwo.jpg";
 import constructionWorkers from "@images/construction-workers.avif";
 import aerialView from "@images/aerial-view.avif";
 import usingTools from "@images/using-tools.avif";
@@ -25,8 +26,6 @@ interface Article {
   btnTitle?: string;
   btnURL?: string;
   single?: boolean;
-  img?: any;
-  imgAlt?: string;
   imgOne?: any;
   imgOneAlt?: string;
   imgTwo?: any;
@@ -36,22 +35,23 @@ interface Article {
 const articles: Article[] = [
   {
     isRightSection: true,
-    title: "Delivering Expert Guidance",
-    subTitle:
-      "Embarking on a construction project can be overwhelming. With our professional consultation services, we guide you through every stage, ensuring you make informed decisions. Whether you are a DIY enthusiast or a skilled contractor, our experts are on hand to offer tailored advice on product selection, project scope, and compliance with local regulations.",
+    title: "American Standard System Installation for a Cozy Winter",
+    subTitle:"Enjoy a warm and reliable home throughout the colder months with a top-quality HVAC system.\n14 SEER Package System.\n4 Ton A/C.\n90K BTU Gas Heat.\nDuct Repairs Included.\n10-Year Equipment Warranty.\nBrand New Surge Protector.\nWorry-Free Comfort All Winter Long!",
     single: false,
-    imgOne: blueprints,
+    imgOne: heatingInstallation,
     imgOneAlt: "Blueprints and digital tablet with construction plans.",
-    imgTwo: personWorking,
+    imgTwo: heatingInstallationTwo,
     imgTwoAlt: "Person working in the office",
   },
   {
     isRightSection: false,
-    title: "Transforming Designs into Reality",
-    subTitle:
-      "Our skilled craftsmen bring precision and excellence to every construction project. From minor installations to substantial structural work, ScrewFast offers reliable construction services to turn your plans into tangible outcomes. We ensure the highest standards of safety and workmanship, utilizing top-quality tools and materials from our extensive inventory.",
-    img: beforeAfter,
-    imgAlt: "Construction site before and after",
+    title: "Samsung Mini Split Installations that Make your Place Cooler",
+    subTitle:"Customer enjoyed the cooler weather with the installation of this Samsung mini-split system.We’re committed to keeping your systems running smoothly.",
+    single: false,
+    imgOne: samsung,
+    imgOneAlt: "Samsung Equipment One",
+    imgTwo: samsungtwo,
+    imgTwoAlt: "Samsung Equipment Two",
     btnExists: true,
     btnTitle: "Learn More",
     btnURL: "#",
@@ -72,8 +72,8 @@ const articles: Article[] = [
     title: "Ensuring Long-lasting Performance",
     subTitle:
       "Our commitment to your project doesn't end at completion. ScrewFast offers ongoing maintenance and support services to ensure your construction's longevity and performance. From regular check-ups to emergency assistance, our responsive team is there to provide seamless support.",
-    img: usingTools,
-    imgAlt:
+    imgOne: usingTools,
+    imgOneAlt:
       "Man in orange and black vest wearing white helmet holding yellow and black power tool",
   },
   {
@@ -116,7 +116,7 @@ const pageTitle: string = `Services | ${SITE.title}`;
   <!--MainSection is the introductory section of the page, it also contains a CTA button-->
   <MainSection
     title="Uniting Expertise with Your Vision"
-    subTitle="At ScrewFast, we take pride in providing comprehensive solutions and exceptional service in the hardware and construction industry. Our experienced team is dedicated to supporting your project from inception to completion with a range of specialized services."
+    subTitle="At Kelch Total Comfort, we take pride in providing comprehensive solutions and exceptional service in the heating, AC and ventilation industry. Our experienced team is dedicated to supporting your project from inception to completion with a range of specialized services. Take a look at some of our recent projects."
     btnExists={true}
     btnTitle="Schedule a Consultation"
     btnURL="#"
@@ -131,7 +131,9 @@ const pageTitle: string = `Services | ${SITE.title}`;
   -->
   {
     articles.map(article => {
-      return article.isRightSection ? (
+      const Component = ( article.isRightSection ) ? RightSection : LeftSection;
+
+      return (
         <RightSection
           title={article.title}
           subTitle={article.subTitle}
@@ -144,17 +146,7 @@ const pageTitle: string = `Services | ${SITE.title}`;
           btnTitle={article.btnTitle}
           btnURL={article.btnURL}
         />
-      ) : (
-        <LeftSection
-          title={article.title}
-          subTitle={article.subTitle}
-          img={article.img}
-          imgAlt={article.imgAlt}
-          btnExists={article.btnExists}
-          btnTitle={article.btnTitle}
-          btnURL={article.btnURL}
-        />
-      );
+      )
     })
   }
   <!--FeaturesStats section showcases essential stats valuable to users-->

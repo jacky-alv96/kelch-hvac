@@ -57,8 +57,9 @@ interface Props {
         <Image
           class="w-full rounded-lg"
           src={imgOne}
-          alt={imgOneAlt}
+          alt="Foo"
           format={"avif"}
+          inferSize={true}
         />
       </div>
     ) : (
@@ -67,17 +68,19 @@ interface Props {
         <Image
           class="w-full rounded-xl"
           src={imgOne}
-          alt={imgOneAlt}
+          alt="Foo"
           draggable={"false"}
           format={"avif"}
+          inferSize={true}
         />
         <!-- Second image in a two-image layout -->
         <Image
           class="mt-4 w-full rounded-xl lg:mt-10"
           src={imgTwo}
-          alt={imgTwoAlt}
+          alt="Foo"
           draggable={"false"}
           format={"avif"}
+          inferSize={true}
         />
       </div>
     )

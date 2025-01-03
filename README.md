@@ -272,7 +272,7 @@ Edit the `navBarLinks` array to adjust navigation bar links:
 // An array of links for the navigation bar
 export const navBarLinks: NavLink[] = [
   { name: "Home", url: "/" },
-  { name: "Products", url: "/products" },
+  { name: "About", url: "/about" },
   { name: "Services", url: "/services" },
   { name: "Blog", url: "/blog" },
   { name: "Contact", url: "/contact" },
@@ -398,7 +398,7 @@ Please note that smooth scrolling can affect accessibility and performance on so
 
 ### GSAP Integration
 
- For individual product pages, [GSAP](https://gsap.com/) has been integrated to add engaging animations that execute as soon as the product page loads. You can find and modify the GSAP configuration in the script sections of the product page file located at `src/pages/products/[...slug].astro` and the insights page at `src/pages/insights/[...slug].astro`:
+ For individual product pages, [GSAP](https://gsap.com/) has been integrated to add engaging animations that execute as soon as the product page loads. You can find and modify the GSAP configuration in the script sections of the product page file located at `src/pages/about/[...slug].astro` and the insights page at `src/pages/insights/[...slug].astro`:
 
 ```astro
 <script>

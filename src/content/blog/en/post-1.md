@@ -1,5 +1,5 @@
 ---
-title: "Maximizing Efficiency with ScrewFast's Cutting-Edge Tools"
+title: "Maximizing the efficiency of Your Home with Kelch's services"
 description: "Innovating Construction Efficiency with Precision Tools & Support"
 author: "Jacob"
 authorImage: "@/images/blog/jacob.avif"

@@ -1,24 +1,27 @@
 ---
 // Import AvatarTestimonialSection component for use in this module
 import AvatarTestimonialSection from "../../ui/avatars/AvatarTestimonialSection.astro";
+import ReviewComponent from "@components/ui/blocks/ReviewComponent.astro";
 
-// Define props from Astro
-const { title, testimonials } = Astro.props;
-
-// Define TypeScript interface for Testimonial
-interface Testimonial {
-  content: string;
-  author: string;
-  role: string;
-  avatarSrc: string;
-  avatarAlt: string;
-}
-
-// Define TypeScript interface for props
-interface Props {
-  title: string;
-  testimonials: Testimonial[];
-}
+const testimonials = [
+  // First testimonial data
+  {
+    content: "\"Chris was very kind and professional. Within 20 minutes of my call, he had someone on the way to look at it. He also took time to explain what they would be checking for. The technician arrived, got the part, and had everything fixed within a few hours.I really wasn't expecting such great service, especially with the temperatures being as high as they were, which no doubt kept them very busy. Thank you for helping us and doing it quickly!\"",
+    author: "Shayla Galapagos",
+  },
+  // Second testimonial data
+  {
+    content:
+      " \"Thank you Chris & staff for going the extra mile , after installing a new AC unit for me they discovered plumbing problems under my house they took care of getting a plumber for me and making sure the job got taken care of . I appreciate the help so much thx you all.\" ",
+    author: "Janel Trujillo",
+  },
+  // Third testimonial data
+  {
+    content:
+      " \"I called Kelch’s 3/20 to see about fixing my propane line under my house. It wasn’t holding pressure. They were able to come the next day 3/21. They were fast, efficient, and fair in pricing. It was such a relief to get my line fixed I figured it was gonna cost an arm & an leg but it didn’t.\" ",
+    author: "Javonna Jay Peel",
+  },
+];
 ---
 <!-- Main div that wraps the testimonials section -->
 <section
@@ -30,8 +33,10 @@ interface Props {
     <h2
       class="text-balance text-2xl font-bold text-neutral-800 dark:text-neutral-200 sm:text-3xl lg:text-4xl"
     >
-      {title}
+    What Our Customers Say
     </h2>
+    <ReviewComponent starCount={4} rating="4.9" reviews=`From <span class="font-bold">100+</span> Reviews` />
+
   </div>
 
   <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
