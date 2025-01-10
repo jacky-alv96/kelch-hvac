@@ -52,9 +52,7 @@ const articles: Article[] = [
     imgOneAlt: "Samsung Equipment One",
     imgTwo: samsungtwo,
     imgTwoAlt: "Samsung Equipment Two",
-    btnExists: true,
-    btnTitle: "Learn More",
-    btnURL: "#",
+    btnExists: false,
   },
   {
     isRightSection: true,
@@ -70,11 +68,14 @@ const articles: Article[] = [
   {
     isRightSection: false,
     title: "Ensuring Long-lasting Performance",
+    single: false,
     subTitle:
       "Our commitment to your project doesn't end at completion. ScrewFast offers ongoing maintenance and support services to ensure your construction's longevity and performance. From regular check-ups to emergency assistance, our responsive team is there to provide seamless support.",
     imgOne: usingTools,
     imgOneAlt:
       "Man in orange and black vest wearing white helmet holding yellow and black power tool",
+    imgTwo: aerialView,
+    imgTwoAlt: "Aerial view of managed construction",
   },
   {
     isRightSection: true,
@@ -134,7 +135,7 @@ const pageTitle: string = `Services | ${SITE.title}`;
       const Component = ( article.isRightSection ) ? RightSection : LeftSection;
 
       return (
-        <RightSection
+        <Component
           title={article.title}
           subTitle={article.subTitle}
           single={article.single}
