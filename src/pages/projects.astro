@@ -5,17 +5,21 @@ import MainSection from "@components/ui/blocks/MainSection.astro";
 import LeftSection from "@components/ui/blocks/LeftSection.astro";
 import RightSection from "@components/ui/blocks/RightSection.astro";
 import FeaturesStats from "@components/sections/features/FeaturesStats.astro";
+import ServicesSection from "@components/ui/blocks/ServicesSection.astro"
+
+import TestimonialsSectionAlt from "@components/sections/testimonials/TestimonialsSectionAlt.astro";
 
 // Import necessary images
 import heatingInstallation from "@images/heating-installation.jpg";
 import heatingInstallationTwo from "@images/heating-installation-2.jpg";
 import samsung from "@images/samsung.jpg";
 import samsungtwo from "@images/samsungtwo.jpg";
-import constructionWorkers from "@images/construction-workers.avif";
-import aerialView from "@images/aerial-view.avif";
-import usingTools from "@images/using-tools.avif";
-import progressBuilding from "@images/progress-building.avif";
-import underConstruction from "@images/under-construction.avif";
+import ameristarupgradetwo from "src/images/starlight/ameristar-upgrade-two.jpg";
+import gasvalve from "@/images/gas-valve.jpg";
+import gasvalvetwo from "@/images/gas-valve-two.jpg";
+import ameristarupgrade from "src/images/starlight/ameristar-upgrade.jpg";
+import gassystem from "@images/gassystem.jpg";
+import gassystemtwo from "src/images/gassystemtwo.jpg";
 import { SITE } from "@data/constants";
 
 interface Article {
@@ -35,61 +39,72 @@ interface Article {
 const articles: Article[] = [
   {
     isRightSection: true,
-    title: "American Standard System Installation for a Cozy Winter",
+    title: "American Standard System Installation For A Cozy Winter",
     subTitle:"Enjoy a warm and reliable home throughout the colder months with a top-quality HVAC system.\n14 SEER Package System.\n4 Ton A/C.\n90K BTU Gas Heat.\nDuct Repairs Included.\n10-Year Equipment Warranty.\nBrand New Surge Protector.\nWorry-Free Comfort All Winter Long!",
     single: false,
     imgOne: heatingInstallation,
     imgOneAlt: "Blueprints and digital tablet with construction plans.",
     imgTwo: heatingInstallationTwo,
     imgTwoAlt: "Person working in the office",
+    btnExists: true,
+    btnTitle: "Get a quote",
+    btnURL: "/contact",
   },
   {
     isRightSection: false,
-    title: "Samsung Mini Split Installations that Make your Place Cooler",
+    title: "Samsung Mini Split Installations That Make Your Place Cooler",
     subTitle:"Customer enjoyed the cooler weather with the installation of this Samsung mini-split system.We’re committed to keeping your systems running smoothly.",
     single: false,
     imgOne: samsung,
     imgOneAlt: "Samsung Equipment One",
     imgTwo: samsungtwo,
     imgTwoAlt: "Samsung Equipment Two",
-    btnExists: false,
+    btnExists: true,
+    btnTitle: "Get a quote",
+    btnURL: "/contact",
   },
   {
     isRightSection: true,
-    title: "Navigating Projects with Professional Oversight",
+    title: "Ameristar 3 Ton System Upgrade: 80% Gas Furnace & Coil",
     subTitle:
-      "Effective project management is at the heart of any successful build. ScrewFast provides thorough planning and robust management services that keep your project on time and within budget. Let us handle the complexities of workflow coordination, resource allocation, and stakeholder communication while you focus on your vision.",
+      "3 Ton Ameristar HVAC system upgraded, including an energy-efficient 80% natural gas furnace and a new evaporator coil. This upgrade ensures reliable comfort throughout the year, with improved heating and cooling performance. The installation was quick and hassle-free, bringing a more efficient system to your home in no time.",
     single: false,
-    imgOne: constructionWorkers,
-    imgOneAlt: "Construction workers orchestrating a project",
-    imgTwo: aerialView,
-    imgTwoAlt: "Aerial view of managed construction",
+    imgOne: ameristarupgradetwo,
+    imgOneAlt: "Image of Ameristar System Upgrade",
+    imgTwo: ameristarupgrade,
+    imgTwoAlt: "Second image of Ameristar System Upgrade",
+    btnExists: true,
+    btnTitle: "Get a quote",
+    btnURL: "/contact",
   },
   {
     isRightSection: false,
-    title: "Ensuring Long-lasting Performance",
+    title: "Quick & Reliable Gas Valve, Blower Motor and Oven Repairs!",
     single: false,
     subTitle:
-      "Our commitment to your project doesn't end at completion. ScrewFast offers ongoing maintenance and support services to ensure your construction's longevity and performance. From regular check-ups to emergency assistance, our responsive team is there to provide seamless support.",
-    imgOne: usingTools,
+      "Gas valve and ECM blower motor replaced on unit as well as a heater installed in a commercial oven, and a gas valve replaced on a residential heating system, ensuring reliable performance and efficiency.",
+    imgOne: gasvalve,
     imgOneAlt:
-      "Man in orange and black vest wearing white helmet holding yellow and black power tool",
-    imgTwo: aerialView,
-    imgTwoAlt: "Aerial view of managed construction",
+      "Image of gas valve zoomed in",
+    imgTwo: gasvalvetwo,
+    imgTwoAlt: "Second image of gas valve",
+    btnExists: true,
+    btnTitle: "Get a quote",
+    btnURL: "/contact",
   },
   {
     isRightSection: true,
-    title: "Crafting Bespoke Strategies for Unique Challenges",
+    title: "American Standard 16 SEER Gas Package System: Efficient, Quiet, & Reliable",
     subTitle:
-      "For our larger enterprise clients, ScrewFast offers custom solutions designed to meet specific industry challenges. By understanding your unique needs, we engineer tailored strategies aimed at optimizing your operations, enhancing efficiency, and driving your business forward.",
+      "American Standard 16 SEER Gas Package System installed with an upgraded ductwork add-on. The system runs quietly and flawlessly, backed by excellent warranties for peace of mind.",
     single: false,
-    imgOne: progressBuilding,
+    imgOne: gassystem,
     imgOneAlt: "In progress building structure",
-    imgTwo: underConstruction,
+    imgTwo: gassystemtwo,
     imgTwoAlt: "Brown and gray building under construction",
     btnExists: true,
-    btnTitle: "Read more",
-    btnURL: "#",
+    btnTitle: "Get a quote",
+    btnURL: "/contact",
   },
 ];
 
@@ -108,7 +123,7 @@ const pageTitle: string = `Services | ${SITE.title}`;
     "isPartOf": {
         "@type": "WebSite",
         "url": "https://screwfast.uk",
-        "name": "ScrewFast",
+        "name": "Kelch Total Comfort LLC",
         "description": "ScrewFast offers top-tier hardware tools and expert construction services to meet all your project needs."
     },
     "inLanguage": "en-US"
@@ -116,11 +131,11 @@ const pageTitle: string = `Services | ${SITE.title}`;
 >
   <!--MainSection is the introductory section of the page, it also contains a CTA button-->
   <MainSection
-    title="Uniting Expertise with Your Vision"
+    title="Our Latest Projects"
     subTitle="At Kelch Total Comfort, we take pride in providing comprehensive solutions and exceptional service in the heating, AC and ventilation industry. Our experienced team is dedicated to supporting your project from inception to completion with a range of specialized services. Take a look at some of our recent projects."
     btnExists={true}
-    btnTitle="Schedule a Consultation"
-    btnURL="#"
+    btnTitle="Get a Quote"
+    btnURL="/contact"
   />
   <!-- RightSection and LeftSection contain details about various services along with pertinent imagery.
   They alternate for variety in design.
@@ -150,25 +165,6 @@ const pageTitle: string = `Services | ${SITE.title}`;
       )
     })
   }
-  <!--FeaturesStats section showcases essential stats valuable to users-->
-  <FeaturesStats
-    title="By the Numbers"
-    subTitle="Our commitment to quality and reliability is evident in every project we undertake. At ScrewFast, we are dedicated to delivering industry-leading services that ensure your construction projects are built to last."
-    mainStatTitle="96%"
-    mainStatSubTitle="of our clients rate their experience with ScrewFast as exceptional"
-    stats={[
-      {
-        stat: "99.8%",
-        description: "project completion rate",
-      },
-      {
-        stat: "5,000+",
-        description: "successful installations",
-      },
-      {
-        stat: "85%",
-        description: "client growth year-over-year",
-      },
-    ]}
-  />
+
+  <TestimonialsSectionAlt />
 </MainLayout>

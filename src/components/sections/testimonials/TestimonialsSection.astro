@@ -21,7 +21,6 @@ type Testimonial = {
   content: string;
   author: string;
   role: string;
-  avatarSrc: string;
 };
 
 // TypeScript type for stats.
@@ -53,28 +52,28 @@ type StatProps = {
       }
       </div>
 
-      <!-- Generate a blockquote for each testimonial in the testimonials array by mapping over the array. -->
-      { testimonials &&
-        testimonials.map((testimonial) => (
-        <TestimonialItem content={testimonial.content} author={testimonial.author} role={testimonial.role} avatarSrc={testimonial.avatarSrc} />
-        ))
+      {
+        testimonials &&
+          testimonials.map((testimonial) => (
+          <TestimonialItem content={testimonial.content} author={testimonial.author} role={testimonial.role} />
+          ))
       }
     </div>
-{ statistics &&
-    <div class="mt-10 lg:col-span-6 lg:col-end-13 lg:mt-0">
-      <div class="space-y-6 sm:space-y-8">
-        <ul
-          class="grid grid-cols-2 divide-x-2 divide-y-2 divide-neutral-300 overflow-hidden dark:divide-neutral-700"
-        >
-          <!-- Generate a list item for each stat in the statistics array by mapping over the array. -->
-          {
-            statistics.map((stat, index) => (
-            <StatsGrid count={stat.count} description={stat.description} index={index}/>
-            ))
-          }
-        </ul>
-      </div>
-    </div>
-  }
+    { statistics &&
+        <div class="mt-10 lg:col-span-6 lg:col-end-13 lg:mt-0">
+          <div class="space-y-6 sm:space-y-8">
+            <ul
+              class="grid grid-cols-2 divide-x-2 divide-y-2 divide-neutral-300 overflow-hidden dark:divide-neutral-700"
+            >
+              <!-- Generate a list item for each stat in the statistics array by mapping over the array. -->
+              {
+                statistics.map((stat, index) => (
+                <StatsGrid count={stat.count} description={stat.description} index={index}/>
+                ))
+              }
+            </ul>
+          </div>
+        </div>
+      }
   </div>
 </section>

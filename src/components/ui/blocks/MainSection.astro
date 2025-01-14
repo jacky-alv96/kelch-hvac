@@ -18,26 +18,50 @@ interface Props {
 <section
   class="mx-auto mt-10 max-w-[85rem] px-4 py-10 sm:px-6 sm:py-16 lg:px-8 lg:py-14 2xl:max-w-full"
 >
-  <div class="max-w-screen-md">
-    <!-- Section title -->
-    <h1
-      class="mb-4 text-balance text-4xl font-extrabold tracking-tight text-neutral-800 dark:text-neutral-200"
-    >
-      {title}
-    </h1>
-    <!-- Section subtitle -->
-    <p
-      class="mb-8 max-w-prose text-pretty font-normal text-neutral-600 dark:text-neutral-400 sm:text-xl"
-    >
-      {subTitle}
-    </p>
-    <!-- Conditional rendering of PrimaryCTA component if 'btnExists' property is truthy -->
-    {
-      btnExists ? (
-        <div class="flex flex-col space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
-          <PrimaryCTA title={btnTitle} url={btnURL} />
-        </div>
-      ) : null
-    }
+  <div class="flex w-full">
+    <div class="lg:w-3/4 w-full">
+      <!-- Section title -->
+      <h1
+        class="mb-4 text-balance text-4xl font-extrabold tracking-tight text-neutral-800 dark:text-neutral-200"
+      >
+        {title}
+      </h1>
+      <!-- Section subtitle -->
+      <p
+        class="mb-8 max-w-prose text-pretty font-normal text-neutral-600 dark:text-neutral-400 sm:text-xl"
+      >
+        {subTitle}
+      </p>
+      <!-- Conditional rendering of PrimaryCTA component if 'btnExists' property is truthy -->
+      {
+        btnExists ? (
+          <div class="flex flex-col space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
+            <PrimaryCTA title={btnTitle} url={btnURL} />
+          </div>
+        ) : null
+      }
+    </div>
+
+
+    <!-- <div>
+      <ul class="flex flex-col items-center">
+        <li>Residential & Commercial System Installations </li>
+        <li>A/C & Heat Routine Service (Yearly Maintenance)</li>
+        <li>Troubleshoot of Improper Functioning A/C or Heat</li>
+        <li>Ductwork Inspection/Cleaning/Replacement</li>
+        <li>System Repairs & Maintenance</li>
+        <li>System Replacements & Changeouts</li>
+        <li>New HVAC System retrofits during Remodels</li>
+        <li>New Construction HVAC Systems</li>
+        <li>Standard & High Efficiency Options</li>
+        <li>Mini Split Installation for any Application</li>
+        <li>Dryer Vent Cleaning</li>
+        <li>Air Quality Filtration Systems & Safety Devices</li>
+        <li>Gas & Propane Line Leak Checks & Replacements</li>
+        <li>Honeywell Generator Installation</li>
+      </ul>
+    </div> -->
   </div>
 </section>
+
+<div class="col-span-full h-5/6 w-full rounded-xl bg-neutral-100 dark:bg-white/[.075] sm:h-3/4 lg:col-span-7 lg:col-start-6 lg:h-full" data-astro-source-file="/Users/jackyalvstad/Desktop/KelchHVAC/src/components/sections/features/FeaturesNavs.astro" data-astro-source-loc="87:8"></div>
